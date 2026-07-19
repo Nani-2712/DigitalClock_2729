@@ -18,7 +18,7 @@ function Clock(){
 
     function padzero(number){
         if(number<10)return "0"+number;
-        
+
         return number;
     }
     function formatTime(){
@@ -27,9 +27,9 @@ function Clock(){
         const sec=time.getSeconds();
         const meridian=(hour>=12 ? "PM":"AM");
         hour=hour%12;
-        if(hour==0)hour=12;
+        if(hour===0)hour=12;
 
-        return `${padzero(hour)}:${padzero(min)}:${padzero(sec)} ${padzero(meridian)}`;
+        return `${padzero(hour)}:${padzero(min)}:${padzero(sec)} ${(meridian)}`;
     }
   return(
     <div className="clock-container">
